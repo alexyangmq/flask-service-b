@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM public.ecr.aws/docker/library/python:3.8
 WORKDIR /app
 COPY . .
 RUN python3 -m pip install --upgrade pip
