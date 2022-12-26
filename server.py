@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import requests
 
 app = Flask(__name__)
 
@@ -16,9 +17,9 @@ items = [
 
 @app.route('/')
 def index():
-    # return {'message': 'Working fine..'}
-    return jsonify(message='Working perfect...')
-
+    url = 'http://flask-service-a-lb-1769393057.us-east-1.elb.amazonaws.com/items'
+    response = requests.get(url)
+    return response.text
 
 @app.route('/items')
 def fetch_items():
