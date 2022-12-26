@@ -17,7 +17,7 @@ items = [
 @app.route('/')
 def index():
     # return {'message': 'Working fine..'}
-    return jsonify(message='Working perfect...')
+    return jsonify(message='Working fine...')
 
 
 @app.route('/items')
