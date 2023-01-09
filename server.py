@@ -17,7 +17,8 @@ items = [
 
 @app.route('/')
 def index():
-    return jsonify(message='Working fine...')
+    return jsonify(message='Resting fine...')
+#     return jsonify(message='Working fine...')
 #     url = 'http://flask-service-a-lb-1769393057.us-east-1.elb.amazonaws.com/items'
 #     response = requests.get(url)
 #     return response.text
